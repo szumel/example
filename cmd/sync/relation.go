@@ -1,4 +1,4 @@
-//This package is responsible for relation between entities
+//This file is responsible for relation between entities
 package sync
 
 import (
