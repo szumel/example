@@ -8,10 +8,12 @@ import (
 
 type Dispatcher struct {}
 
-func (Dispatcher) ChangedName(name events.MessageChangedName) {
+func (Dispatcher) ChangedAccountLogin(message events.MessageAccountLogin) {}
+
+func (Dispatcher) ChangedMachineName(name events.MessageChangedName) {
 	//testing cycle importing
 	account.Load(1)
 
-	fmt.Println("dispatching changedname from account")
+	fmt.Println("dispatching changedMachineName")
 }
 

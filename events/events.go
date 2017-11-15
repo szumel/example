@@ -7,8 +7,14 @@ type MessageChangedName struct {
 	NewName string
 }
 
+type MessageAccountLogin struct {
+	OldLogin string
+	NewLogin string
+}
+
 type Dispatcher interface {
-	ChangedName(message MessageChangedName)
+	ChangedMachineName(message MessageChangedName)
+	ChangedAccountLogin(message MessageAccountLogin)
 }
 
 func RegisterDispatcher(eventCode string, dispatcher Dispatcher) {
