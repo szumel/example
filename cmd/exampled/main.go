@@ -5,7 +5,7 @@ import (
 	"example/events"
 	accEvents "example/internal/events/account"
 )
-
+//think about some registrar
 func init() {
 	events.RegisterDispatcher("changedName", accEvents.Dispatcher{})
 }
