@@ -1,24 +1,16 @@
 package server
 
 import (
-	"example/cmd/sync"
-	"fmt"
+	"example/internal/machine"
 )
 
 type Grpc struct{}
 
 func (*Grpc) HandleSomeRequest() error {
-	/*
-	suppose magically request handling here
-	 */
-
-	acc, err := sync.GetAccount("example@example.com")
+	err := machine.UpdateMachine()
 	if err != nil {
 		return err
 	}
-
-	//perform actions with account
-	fmt.Println(acc)
 
 	return nil
 }

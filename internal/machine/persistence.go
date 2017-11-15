@@ -1,6 +1,8 @@
 package machine
 
-import "example/internal/platform/persistence"
+import (
+	"example/internal/platform/persistence"
+)
 
 var persistor persistence.Persistor
 
