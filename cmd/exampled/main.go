@@ -3,7 +3,7 @@ package main
 import (
 	"example/cmd/server"
 	"example/events"
-	accEvents "example/internal/account/events"
+	accEvents "example/internal/events/account"
 )
 
 func init() {
