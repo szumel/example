@@ -9,7 +9,9 @@ import (
 type Dispatcher struct {}
 
 func (Dispatcher) ChangedName(name events.MessageChangedName) {
+	//testing cycle importing
 	account.Load(1)
+
 	fmt.Println("dispatching changedname from account")
 }
 
